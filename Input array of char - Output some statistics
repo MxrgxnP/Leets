@@ -1,0 +1,31 @@
+// Given an array of characters, count how many vocals, numbers and doubles
+
+#include <stdio.h>
+#define DIM 20
+
+int main(void) {
+    char A[DIM];
+    int i;
+    int vocals = 0, numbers = 0, doubles = 0;
+
+    printf("Give me an array of chars\n");
+
+    for (i = 0; i < DIM; i ++) {
+        scanf("%c ", &A[i]);
+    }
+
+    // Counting how many of every kind it includes
+    for (i = 0; i < DIM; i ++) {
+        if (A[i] == 'a' || A[i] == 'e' || A[i] == 'i' || A[i] == 'o' || A[i] == 'u') {
+            vocals ++;
+        }
+        else if (A[i] < '9' && A[i] > '0') {
+            numbers ++;
+        }
+        else if (A[i] == A[i + 1]) {
+            doubles ++;
+        }
+    }
+
+    printf("%d vocals, %d numbers and %d doubles", vocals, numbers, vocals);
+}

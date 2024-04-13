@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void) {
+    int num;
+    int ultCifra;
+
+    scanf("%d", &num);
+    while (num!=-1) {
+        ultCifra=num%10;
+        if (ultCifra%2==0) {
+            printf("%d\n", ultCifra);
+        }
+        scanf("%d", &num);
+    }
+
+    return 0;
+}

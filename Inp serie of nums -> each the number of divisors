@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(void) {
+  int num, divisori = 0, sommaDivisori = 0, Conte;
+
+  do {
+    scanf("%d", &num);
+
+    Conte = 1;
+    while (Conte < num) {
+      if (num % Conte == 0) {
+        divisori ++;
+      }
+      sommaDivisori = sommaDivisori + divisori;
+      Conte ++;
+    }
+  } while (num > 0);
+
+  printf("%d", divisori);
+
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+  int a, b;
+  printf("\n Give me two numbers and I'll tell you which is the product of which: ");
+  scanf("%d %d", &a, &b);
+  if (a%b == 0) {
+    printf("The first number %d is a multiple of the second %d", a, b);
+  } else {
+    if (b%a == 0) {
+      printf("The second number %d is the multiple of the first %d", b, a);
+  }
+  }
+    return 0;
+}

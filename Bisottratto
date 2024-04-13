@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+  int bisottratto;
+  int flag = 0;
+
+  scanf("%d", &bisottratto);
+  int ultimaCifra = bisottratto % 10;
+  int penultimaCifra = (bisottratto / 10) % 10;
+
+  if (bisottratto >= 100) {
+    while (ultimaCifra > 0) {
+      if (ultimaCifra - penultimaCifra == 2 || penultimaCifra - ultimaCifra == 2) {
+        flag = 1;
+      }
+    }
+  }
+  if (flag == 1) {
+      printf("SI");
+  } else {
+      printf("NO");
+  }
+
+    return 0;
+}

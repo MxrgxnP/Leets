@@ -1,0 +1,31 @@
+#include <stdio.h>
+int coppiei(int);
+int main(void){
+  int num,r;
+
+  do{
+    scanf("%d",&num);
+  }while(num < 0);
+
+  r = coppiei(num);
+  printf("%d",r);
+
+  return 0;
+}
+
+int coppiei (int num) {
+  int counterCoppie = 0;
+  int lastFigure = num % 10;
+  int penultimaCifra = (num / 10) % 10;
+
+  while (penultimaCifra != 0) {
+    if (lastFigure == penultimaCifra) {
+      counterCoppie ++;
+    }
+    num = num / 10;
+    lastFigure = num % 10;
+    penultimaCifra = (num / 10) % 10;
+  }
+
+  return counterCoppie;
+}

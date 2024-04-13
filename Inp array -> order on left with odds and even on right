@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define N 10
+
+int main(){
+    int src[N];
+    int i = 0;
+    int j = N - 1;
+  int swap;
+
+    for (i = 0; i < N; i ++) {
+        scanf ("%d", &src[i]);
+    }
+
+  for (i = 0; i < N; i ++) {
+    while (src[i] % 2 != 0 && i < N) {
+      i ++;
+    }
+    while (src[j] % 2 == 0 && j > 0) {
+      j --;
+    }
+    if (j > i) {
+      swap = src[i];
+      src[i] = src[j];
+      src[j] = swap;
+    }
+  }
+
+  for (i = 0; i < N; i ++) {
+      printf ("%d ", src[i]);
+  }
+
+return(0);
+}
